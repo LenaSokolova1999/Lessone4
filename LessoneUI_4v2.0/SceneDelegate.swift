@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Lessone4
+//  LessoneUI_4v2.0
 //
-//  Created by Mac Mini 2018 on 23.07.2021.
+//  Created by Mac Mini 2018 on 06.07.2021.
 //
 
 import UIKit

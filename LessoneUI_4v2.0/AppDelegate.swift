@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Lessone4
+//  LessoneUI_4v2.0
 //
-//  Created by Mac Mini 2018 on 23.07.2021.
+//  Created by Mac Mini 2018 on 06.07.2021.
 //
 
 import UIKit
@@ -10,14 +10,26 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+	var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let navigationController = UINavigationController.init(rootViewController: ViewController())
+
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
     // MARK: UISceneSession Lifecycle
+
+    func applicationWillResignActive(_ application: UIApplication) {
+    }
+
+    func applicationDidEnterBackground(_ application: UIApplication) {
+    }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
