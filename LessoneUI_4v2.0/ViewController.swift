@@ -14,47 +14,40 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.childVC.delegate = self
-        labelEmail.frame = CGRect(x: 42, y: 120, width: 300, height: 36)
-        labelEmail.text = "Email"
-        labelEmail.textColor = UIColor.systemPink
-        textFieldEmail.frame = CGRect(x: 42, y: 150, width: 300, height: 36)
-        textFieldEmail.placeholder = "Введите Email"
-        textFieldEmail.backgroundColor = UIColor.white
-        textFieldEmail.textColor = UIColor.darkGray
-        labelPassword.frame = CGRect(x: 42, y: 200, width: 300, height: 36)
-        labelPassword.text = "Пароль"
-        labelPassword.textColor = UIColor.systemPink
-        textFieldPassword.frame = CGRect(x: 42, y: 230, width: 300, height: 36)
-        textFieldPassword.isSecureTextEntry = true
-        textFieldPassword.placeholder = "Введите пароль"
-        textFieldPassword.backgroundColor = UIColor.white
-        textFieldPassword.textColor = UIColor.darkGray
-        button.frame = CGRect(x: 62, y: 310, width: 260, height: 36)
-        button.layer.cornerRadius = 10
-        button.backgroundColor = UIColor.systemPink
-        button.setTitle("Войти", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.view.addSubview(labelEmail)
-        self.view.addSubview(textFieldEmail)
-        self.view.addSubview(labelPassword)
-        self.view.addSubview(textFieldPassword)
-        self.view.addSubview(button)
+        var object = Object()
+        object.labelEmail.frame = CGRect(x: 42, y: 120, width: 300, height: 36)
+        object.labelEmail.text = "Email"
+        object.labelEmail.textColor = UIColor.systemPink
+        object.textFieldEmail.frame = CGRect(x: 42, y: 150, width: 300, height: 36)
+        object.textFieldEmail.placeholder = "Введите Email"
+        object.textFieldEmail.backgroundColor = UIColor.white
+        object.textFieldEmail.textColor = UIColor.darkGray
+        object.labelPassword.frame = CGRect(x: 42, y: 200, width: 300, height: 36)
+        object.labelPassword.text = "Пароль"
+        object.labelPassword.textColor = UIColor.systemPink
+        object.textFieldPassword.frame = CGRect(x: 42, y: 230, width: 300, height: 36)
+        object.textFieldPassword.isSecureTextEntry = true
+        object.textFieldPassword.placeholder = "Введите пароль"
+        object.textFieldPassword.backgroundColor = UIColor.white
+        object.textFieldPassword.textColor = UIColor.darkGray
+        object.button.frame = CGRect(x: 62, y: 310, width: 260, height: 36)
+        object.button.layer.cornerRadius = 10
+        object.button.backgroundColor = UIColor.systemPink
+        object.button.setTitle("Войти", for: .normal)
+        object.button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(object.labelEmail)
+        self.view.addSubview(object.textFieldEmail)
+        self.view.addSubview(object.labelPassword)
+        self.view.addSubview(object.textFieldPassword)
+        self.view.addSubview(object.button)
         self.view.addBackground()
     }
-
-    // MARK: - Public properties
-
-    let labelEmail = UILabel(frame: CGRect.init())
-    let textFieldEmail = UITextField()
-    let labelPassword = UILabel(frame: CGRect.init())
-    let textFieldPassword = UITextField()
-    let button = UIButton()
 
     // MARK: - Public metod
 
     @objc func buttonAction(sender: UIButton!) {
         print("Button Clicked")
-        let vc = HomePage(nibName: "HomePage", bundle: nil)
+        let vc = ServicesPage(nibName: "ServicesPage", bundle: nil)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
