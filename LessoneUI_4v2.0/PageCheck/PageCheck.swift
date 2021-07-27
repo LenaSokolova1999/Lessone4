@@ -73,7 +73,7 @@ extension PageCheck: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         _ = indexPath.row
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell", for: indexPath) as? CheckCell else { return .init() }
-        cell.configure(label: modelArray[indexPath.row].serviceName, title: modelArray[indexPath.row].price)
+        cell.model(serviceName: modelArray[indexPath.row].serviceName, price: modelArray[indexPath.row].price)
         return cell
 	}
 }

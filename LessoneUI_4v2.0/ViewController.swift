@@ -9,37 +9,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Public property
+
+    let xOriginTextfield = 42
+    let yOriginTextfield = 120
+    let widthOriginTextfield = 300
+    let heightOriginTextfield = 36
+
 	// MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.childVC.delegate = self
-        var object = Object()
-        object.labelEmail.frame = CGRect(x: 42, y: 120, width: 300, height: 36)
-        object.labelEmail.text = "Email"
-        object.labelEmail.textColor = UIColor.systemPink
-        object.textFieldEmail.frame = CGRect(x: 42, y: 150, width: 300, height: 36)
-        object.textFieldEmail.placeholder = "Введите Email"
-        object.textFieldEmail.backgroundColor = UIColor.white
-        object.textFieldEmail.textColor = UIColor.darkGray
-        object.labelPassword.frame = CGRect(x: 42, y: 200, width: 300, height: 36)
-        object.labelPassword.text = "Пароль"
-        object.labelPassword.textColor = UIColor.systemPink
-        object.textFieldPassword.frame = CGRect(x: 42, y: 230, width: 300, height: 36)
-        object.textFieldPassword.isSecureTextEntry = true
-        object.textFieldPassword.placeholder = "Введите пароль"
-        object.textFieldPassword.backgroundColor = UIColor.white
-        object.textFieldPassword.textColor = UIColor.darkGray
-        object.button.frame = CGRect(x: 62, y: 310, width: 260, height: 36)
-        object.button.layer.cornerRadius = 10
-        object.button.backgroundColor = UIColor.systemPink
-        object.button.setTitle("Войти", for: .normal)
-        object.button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.view.addSubview(object.labelEmail)
-        self.view.addSubview(object.textFieldEmail)
-        self.view.addSubview(object.labelPassword)
-        self.view.addSubview(object.textFieldPassword)
-        self.view.addSubview(object.button)
+        let elements = UIElements()
+        elements.labelEmail.frame = CGRect(x: xOriginTextfield, y: yOriginTextfield, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.labelEmail.text = "Email"
+        elements.labelEmail.textColor = UIColor.systemPink
+        elements.textFieldEmail.frame = CGRect(x: xOriginTextfield, y: 150, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.textFieldEmail.placeholder = "Введите Email"
+        elements.textFieldEmail.backgroundColor = UIColor.white
+        elements.textFieldEmail.textColor = UIColor.darkGray
+        elements.labelPassword.frame = CGRect(x: xOriginTextfield, y: 200, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.labelPassword.text = "Пароль"
+        elements.labelPassword.textColor = UIColor.systemPink
+        elements.textFieldPassword.frame = CGRect(x: xOriginTextfield, y: 230, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.textFieldPassword.isSecureTextEntry = true
+        elements.textFieldPassword.placeholder = "Введите пароль"
+        elements.textFieldPassword.backgroundColor = UIColor.white
+        elements.textFieldPassword.textColor = UIColor.darkGray
+        elements.button.frame = CGRect(x: xOriginTextfield, y: 310, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.button.layer.cornerRadius = 10
+        elements.button.backgroundColor = UIColor.systemPink
+        elements.button.setTitle("Войти", for: .normal)
+        elements.button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(elements.labelEmail)
+        self.view.addSubview(elements.textFieldEmail)
+        self.view.addSubview(elements.labelPassword)
+        self.view.addSubview(elements.textFieldPassword)
+        self.view.addSubview(elements.button)
         self.view.addBackground()
     }
 

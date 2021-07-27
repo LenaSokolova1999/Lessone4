@@ -28,7 +28,7 @@
 		E0333B72269C464E00B637BC /* PageCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0333B70269C464E00B637BC /* PageCheck.swift */; };
 		E0333B73269C464E00B637BC /* PageCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0333B71269C464E00B637BC /* PageCheck.xib */; };
 		E0333B9626A0401600B637BC /* ModelWithServicesAndPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0333B9526A0401600B637BC /* ModelWithServicesAndPrice.swift */; };
-		E0724AFF26AEB2BA00A258F6 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0724AFE26AEB2BA00A258F6 /* Object.swift */; };
+		E0724AFF26AEB2BA00A258F6 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0724AFE26AEB2BA00A258F6 /* UIElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,7 @@
 		E0333B70269C464E00B637BC /* PageCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCheck.swift; sourceTree = "<group>"; };
 		E0333B71269C464E00B637BC /* PageCheck.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageCheck.xib; sourceTree = "<group>"; };
 		E0333B9526A0401600B637BC /* ModelWithServicesAndPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWithServicesAndPrice.swift; sourceTree = "<group>"; };
-		E0724AFE26AEB2BA00A258F6 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		E0724AFE26AEB2BA00A258F6 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 				E0333A69269447D800B637BC /* ShowCheck */,
 				E0333A30269441B600B637BC /* AppDelegate.swift */,
 				E0333A32269441B600B637BC /* SceneDelegate.swift */,
-				E0724AFE26AEB2BA00A258F6 /* Object.swift */,
+				E0724AFE26AEB2BA00A258F6 /* UIElements.swift */,
 				E0333A34269441B600B637BC /* ViewController.swift */,
 				E0333A36269441B600B637BC /* Main.storyboard */,
 				E0333A39269441B700B637BC /* Assets.xcassets */,
@@ -353,7 +353,7 @@
 				E0333B72269C464E00B637BC /* PageCheck.swift in Sources */,
 				E0333A33269441B600B637BC /* SceneDelegate.swift in Sources */,
 				E0333ABE2694541C00B637BC /* HeaderName.swift in Sources */,
-				E0724AFF26AEB2BA00A258F6 /* Object.swift in Sources */,
+				E0724AFF26AEB2BA00A258F6 /* UIElements.swift in Sources */,
 				E0333B0B2697002600B637BC /* ServicesPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

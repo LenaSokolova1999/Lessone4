@@ -12,7 +12,7 @@ final class CheckCell: UITableViewCell {
     // MARK: - Public properties
 
     @IBOutlet var product: UILabel!
-    @IBOutlet var price: UILabel!
+    @IBOutlet var prices: UILabel!
     var switchPrice = ServicesPage()
 
     // MARK: - Public metod
@@ -21,9 +21,9 @@ final class CheckCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    func configure(serviceName: String, price: String) {
+    func model(serviceName: String, price: String) {
         product.text = serviceName
-        price.text = price
+        prices.text = price
     }
     
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Object: UIView {
+class UIElements: UIView {
 
     // MARK: - Public properties
 
@@ -16,13 +16,4 @@ class Object: UIView {
     let labelPassword = UILabel(frame: CGRect.init())
     let textFieldPassword = UITextField()
     let button = UIButton()
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
 }
