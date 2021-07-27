@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Model {
-    let label: String
-    var titel: String
+struct ModelWithServicesAndPrice {
+    let serviceName: String
+    var price: String
 }

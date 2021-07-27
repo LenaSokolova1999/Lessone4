@@ -19,17 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-
         return true
     }
 
     // MARK: UISceneSession Lifecycle
-
-    func applicationWillResignActive(_ application: UIApplication) {
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-    }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

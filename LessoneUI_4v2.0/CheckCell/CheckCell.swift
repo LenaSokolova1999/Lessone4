@@ -12,10 +12,8 @@ final class CheckCell: UITableViewCell {
     // MARK: - Public properties
 
     @IBOutlet var product: UILabel!
-
-    @IBOutlet var price: UILabel!
-
-    var switchPrice = HomePage()
+    @IBOutlet var prices: UILabel!
+    var switchPrice = ServicesPage()
 
     // MARK: - Public metod
 
@@ -23,13 +21,9 @@ final class CheckCell: UITableViewCell {
         super.awakeFromNib()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-
-    func configure(label: String, title: String) {
-        product.text = label
-        price.text = title
+    func model(serviceName: String, price: String) {
+        product.text = serviceName
+        prices.text = price
     }
     
 }

@@ -24,17 +24,15 @@ final class PageCheck: UIViewController {
 	// MARK: - Public property
 
     @IBOutlet var tableView: UITableView!
-
-    var switchPrice = HomePage()
-
-    var modelArray = [Model] ()
+    var switchPrice = ServicesPage()
+    var modelArray = [ModelWithServicesAndPrice] ()
 
     // MARK: - Public metod
 
     public func inits() {
-        let model1 = Model(label: "Бронь зала", titel: switchPrice.on)
-        let model2 = Model(label: "Зал для курения", titel: switchPrice.on)
-        let model3 = Model(label: "VIP комната", titel: switchPrice.on)
+        let model1 = ModelWithServicesAndPrice(serviceName: "Бронь зала", price: switchPrice.on)
+        let model2 = ModelWithServicesAndPrice(serviceName: "Зал для курения", price: switchPrice.on)
+        let model3 = ModelWithServicesAndPrice(serviceName: "VIP комната", price: switchPrice.on)
 
         modelArray.append(model1)
         modelArray.append(model2)
@@ -75,7 +73,7 @@ extension PageCheck: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         _ = indexPath.row
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CheckCell", for: indexPath) as? CheckCell else { return .init() }
-        cell.configure(label: modelArray[indexPath.row].label, title: modelArray[indexPath.row].titel)
+        cell.model(serviceName: modelArray[indexPath.row].serviceName, price: modelArray[indexPath.row].price)
         return cell
 	}
 }

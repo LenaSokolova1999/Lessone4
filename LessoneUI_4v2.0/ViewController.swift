@@ -9,52 +9,52 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Public property
+
+    let xOriginTextfield = 42
+    let yOriginTextfield = 120
+    let widthOriginTextfield = 300
+    let heightOriginTextfield = 36
+
 	// MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.childVC.delegate = self
-        labelEmail.frame = CGRect(x: 42, y: 120, width: 300, height: 36)
-        labelEmail.text = "Email"
-        labelEmail.textColor = UIColor.systemPink
-        textFieldEmail.frame = CGRect(x: 42, y: 150, width: 300, height: 36)
-        textFieldEmail.placeholder = "Введите Email"
-        textFieldEmail.backgroundColor = UIColor.white
-        textFieldEmail.textColor = UIColor.darkGray
-        labelPassword.frame = CGRect(x: 42, y: 200, width: 300, height: 36)
-        labelPassword.text = "Пароль"
-        labelPassword.textColor = UIColor.systemPink
-        textFieldPassword.frame = CGRect(x: 42, y: 230, width: 300, height: 36)
-        textFieldPassword.isSecureTextEntry = true
-        textFieldPassword.placeholder = "Введите пароль"
-        textFieldPassword.backgroundColor = UIColor.white
-        textFieldPassword.textColor = UIColor.darkGray
-        button.frame = CGRect(x: 62, y: 310, width: 260, height: 36)
-        button.layer.cornerRadius = 10
-        button.backgroundColor = UIColor.systemPink
-        button.setTitle("Войти", for: .normal)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.view.addSubview(labelEmail)
-        self.view.addSubview(textFieldEmail)
-        self.view.addSubview(labelPassword)
-        self.view.addSubview(textFieldPassword)
-        self.view.addSubview(button)
+        let elements = UIElements()
+        elements.labelEmail.frame = CGRect(x: xOriginTextfield, y: yOriginTextfield, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.labelEmail.text = "Email"
+        elements.labelEmail.textColor = UIColor.systemPink
+        elements.textFieldEmail.frame = CGRect(x: xOriginTextfield, y: 150, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.textFieldEmail.placeholder = "Введите Email"
+        elements.textFieldEmail.backgroundColor = UIColor.white
+        elements.textFieldEmail.textColor = UIColor.darkGray
+        elements.labelPassword.frame = CGRect(x: xOriginTextfield, y: 200, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.labelPassword.text = "Пароль"
+        elements.labelPassword.textColor = UIColor.systemPink
+        elements.textFieldPassword.frame = CGRect(x: xOriginTextfield, y: 230, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.textFieldPassword.isSecureTextEntry = true
+        elements.textFieldPassword.placeholder = "Введите пароль"
+        elements.textFieldPassword.backgroundColor = UIColor.white
+        elements.textFieldPassword.textColor = UIColor.darkGray
+        elements.button.frame = CGRect(x: xOriginTextfield, y: 310, width: widthOriginTextfield, height: heightOriginTextfield)
+        elements.button.layer.cornerRadius = 10
+        elements.button.backgroundColor = UIColor.systemPink
+        elements.button.setTitle("Войти", for: .normal)
+        elements.button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(elements.labelEmail)
+        self.view.addSubview(elements.textFieldEmail)
+        self.view.addSubview(elements.labelPassword)
+        self.view.addSubview(elements.textFieldPassword)
+        self.view.addSubview(elements.button)
         self.view.addBackground()
     }
-
-    // MARK: - Public properties
-
-    let labelEmail = UILabel(frame: CGRect.init())
-    let textFieldEmail = UITextField()
-    let labelPassword = UILabel(frame: CGRect.init())
-    let textFieldPassword = UITextField()
-    let button = UIButton()
 
     // MARK: - Public metod
 
     @objc func buttonAction(sender: UIButton!) {
         print("Button Clicked")
-        let vc = HomePage(nibName: "HomePage", bundle: nil)
+        let vc = ServicesPage(nibName: "ServicesPage", bundle: nil)
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }

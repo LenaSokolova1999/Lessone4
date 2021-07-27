@@ -1,5 +1,5 @@
 //
-//  HomePage.swift
+//  ServicesPage.swift
 //  LessoneUI_4v2.0
 //
 //  Created by Mac Mini 2018 on 08.07.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomePage: UIViewController {
+final class ServicesPage: UIViewController {
 
     // MARK: - Life Cycle
 
@@ -67,7 +67,7 @@ final class HomePage: UIViewController {
 
 // MARK: - Extension UITableViewDataSource
 
-extension HomePage: UITableViewDataSource {
+extension ServicesPage: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.count
@@ -107,7 +107,7 @@ extension HomePage: UITableViewDataSource {
 
 // MARK: - Extension UITableViewDelegate
 
-extension HomePage: UITableViewDelegate {
+extension ServicesPage: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath)
     }
@@ -115,7 +115,7 @@ extension HomePage: UITableViewDelegate {
 
 // MARK: - Extension ShowCheckDelegate
 
-extension HomePage: ShowCheckDelegate {
+extension ServicesPage: ShowCheckDelegate {
 
     func didTapButton() {
         print("Button Clicked")
